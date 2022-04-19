@@ -3,8 +3,8 @@ import "./ExpenseItemList.css";
 import ExpenseCard from "../UI/Card";
 import ExpenseItem from "./ExpenseItem";
 
-function ExpenseItemList(props) {
-  const { expenses } = props;
+const ExpenseItemList = (props) => {
+  const {expenses} = props;
 
   return (
     <ExpenseCard className="expense-list">
