@@ -1,17 +1,18 @@
 import "./ExpenseItemList.css";
 
+import ExpenseCard from "./ExpenseCard";
 import ExpenseItem from "./ExpenseItem";
 
 function ExpenseItemList(props) {
   const { expenses } = props;
 
   return (
-    <div className="expense-list">
+    <ExpenseCard className="expense-list">
       {expenses.map((expense) => {
         return <ExpenseItem {...expense} />;
       })}
-    </div>
+    </ExpenseCard>
   );
 }
 
-export default ExpenseItemList
+export default ExpenseItemList;
