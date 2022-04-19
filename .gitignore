@@ -152,6 +152,12 @@ psd
 thumb
 sketch
 
+# testing
+/coverage
+
+# production
+/build
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
