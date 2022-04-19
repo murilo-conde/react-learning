@@ -1,4 +1,4 @@
-import "./ExpenseCard.css";
+import "./Card.css";
 
 function ExpenseCard(props) {
   const { className, children } = props;
