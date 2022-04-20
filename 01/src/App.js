@@ -9,8 +9,8 @@ const defaultExpenses = [
 ]
 
 const App = () => {
-
   const [expenses, setExpenses] = useState(defaultExpenses)
+  const [year, setYear] = useState(2022)
 
   const addExpenseHandler = (data) => {
     setExpenses((prev) => {
@@ -18,11 +18,15 @@ const App = () => {
     })
   }
 
+  const filterHandler = (data) => {
+    setYear(data)
+  }
+
   return (
     <div>
       <NewExpense onAddExpanse={addExpenseHandler}/>
-      <ExpensesSummary/>
-      <ExpenseItemList expenses={expenses}/>
+      <ExpensesSummary onFilter={filterHandler}/>
+      <ExpenseItemList expenses={expenses} year={year}/>
     </div>
   )
 }
