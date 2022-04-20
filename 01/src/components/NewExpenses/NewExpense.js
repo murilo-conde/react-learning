@@ -1,5 +1,6 @@
 import './NewExpense.css'
 import NewExpenseForm from "./NewExpenseForm"
+import Card from "../UI/Card"
 
 const NewExpense = ({onAddExpanse}) => {
   const saveExpenseHandler = (data) => {
@@ -13,9 +14,9 @@ const NewExpense = ({onAddExpanse}) => {
   }
 
   return (
-    <div className="new-expense">
+    <Card className="new-expense">
       <NewExpenseForm onSaveExpanse={saveExpenseHandler}/>
-    </div>
+    </Card>
   )
 }
 

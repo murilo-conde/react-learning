@@ -1,6 +1,7 @@
 import ExpenseItemList from "./components/Expenses/ExpenseItemList"
 import NewExpense from "./components/NewExpenses/NewExpense"
 import {useState} from "react"
+import ExpensesSummary from "./components/ExpensesSummary/ExpensesSummary"
 
 const defaultExpenses = [
   {key: "asdghaspid", title: "Seguro do carro", date: new Date(2022, 1, 18), amount: 2156.0},
@@ -20,6 +21,7 @@ const App = () => {
   return (
     <div>
       <NewExpense onAddExpanse={addExpenseHandler}/>
+      <ExpensesSummary/>
       <ExpenseItemList expenses={expenses}/>
     </div>
   )
