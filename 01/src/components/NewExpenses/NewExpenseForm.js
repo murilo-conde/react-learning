@@ -19,7 +19,7 @@ const NewExpenseForm = ({onSaveExpanse}) => {
 
   useEffect(() => {
     setFocus("title")
-  }, [onSubmit])
+  }, [setFocus, onSaveExpanse])
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
