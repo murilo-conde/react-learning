@@ -1,10 +1,10 @@
 import './ExpenseItemDate.css'
 
 const ExpenseItemDate = (props) => {
-  const {date} = props;
-  const day = date.toLocaleString("pt-BR", {day: "2-digit"});
-  const month = date.toLocaleString("pt-BR", {month: "long"});
-  const year = date.getFullYear();
+  const {date} = props
+  const day = date.toLocaleString("pt-BR", {day: "2-digit"})
+  const month = date.toLocaleString("pt-BR", {month: "long"})
+  const year = date.getFullYear()
 
   return (
     <div className="expense-date">
@@ -12,7 +12,7 @@ const ExpenseItemDate = (props) => {
       <div className="expense-date__month">{month}</div>
       <div className="expense-date__year">{year}</div>
     </div>
-  );
+  )
 }
 
-export default ExpenseItemDate;
+export default ExpenseItemDate

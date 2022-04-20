@@ -1,7 +1,7 @@
 import './NewExpenseForm.css'
 
-import {useForm} from "react-hook-form";
-import {useEffect} from "react";
+import {useForm} from "react-hook-form"
+import {useEffect} from "react"
 
 const defaultValues = {
   title: "",
@@ -18,8 +18,8 @@ const NewExpenseForm = ({onSaveExpanse}) => {
   }
 
   useEffect(() => {
-    setFocus("title");
-  }, [onSubmit]);
+    setFocus("title")
+  }, [onSubmit])
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

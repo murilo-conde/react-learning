@@ -1,5 +1,5 @@
 import './NewExpense.css'
-import NewExpenseForm from "./NewExpenseForm";
+import NewExpenseForm from "./NewExpenseForm"
 
 const NewExpense = ({onAddExpanse}) => {
   const saveExpenseHandler = (data) => {
@@ -14,7 +14,7 @@ const NewExpense = ({onAddExpanse}) => {
 
   return (
     <div className="new-expense">
-      <NewExpenseForm onSaveExpanse={saveExpenseHandler} />
+      <NewExpenseForm onSaveExpanse={saveExpenseHandler}/>
     </div>
   )
 }
