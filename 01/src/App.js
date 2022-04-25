@@ -12,6 +12,8 @@ const App = () => {
   const [expenses, setExpenses] = useState(defaultExpenses)
   const [year, setYear] = useState(2022)
 
+  const filteredExpenses = expenses.filter(expense => expense.date.getFullYear().toString() === year.toString())
+
   const addExpenseHandler = (data) => {
     setExpenses((prev) => {
       return [...prev, data]
@@ -25,8 +27,8 @@ const App = () => {
   return (
     <div>
       <NewExpense onAddExpanse={addExpenseHandler}/>
-      <ExpensesSummary onFilter={filterHandler}/>
-      <ExpenseItemList expenses={expenses} year={year}/>
+      <ExpensesSummary expenses={filteredExpenses} onFilter={filterHandler}/>
+      <ExpenseItemList expenses={filteredExpenses} year={year}/>
     </div>
   )
 }

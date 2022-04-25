@@ -14,6 +14,7 @@ const NewExpense = ({onAddExpanse}) => {
     }
 
     onAddExpanse(expense)
+    setShowNewExpense(false)
   }
 
   return (

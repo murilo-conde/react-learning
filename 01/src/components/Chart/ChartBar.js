@@ -1,8 +1,8 @@
 import './ChartBar.css'
 
-const ChartBar = ({data}) => {
-  const {label, value, max} = data
-  const fillHeight = '' + (value/max * 100) + '%'
+const ChartBar = ({data, max}) => {
+  const {label, value} = data
+  const fillHeight = max > 0 ? '' + (value/max * 100) + '%' : '0%'
 
   return (
     <div className="chart-bar">
