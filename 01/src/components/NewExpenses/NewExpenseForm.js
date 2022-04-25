@@ -9,7 +9,7 @@ const defaultValues = {
   date: ""
 }
 
-const NewExpenseForm = ({onSaveExpanse}) => {
+const NewExpenseForm = ({onSaveExpanse, onCancel}) => {
   const {register, handleSubmit, reset, setFocus} = useForm({defaultValues})
 
   const onSubmit = (data) => {
@@ -38,6 +38,7 @@ const NewExpenseForm = ({onSaveExpanse}) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button onClick={onCancel}>Cancel</button>
         <button type="submit">Add</button>
       </div>
     </form>

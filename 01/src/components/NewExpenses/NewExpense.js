@@ -1,8 +1,11 @@
 import './NewExpense.css'
 import NewExpenseForm from "./NewExpenseForm"
 import Card from "../UI/Card"
+import {useState} from "react"
 
 const NewExpense = ({onAddExpanse}) => {
+  const [showNewExpense, setShowNewExpense] = useState(false)
+
   const saveExpenseHandler = (data) => {
     const expense = {
       ...data,
@@ -15,7 +18,8 @@ const NewExpense = ({onAddExpanse}) => {
 
   return (
     <Card className="new-expense">
-      <NewExpenseForm onSaveExpanse={saveExpenseHandler}/>
+      {showNewExpense && <NewExpenseForm onCancel={() => setShowNewExpense(false)} onSaveExpanse={saveExpenseHandler}/>}
+      {!showNewExpense && <button onClick={() => setShowNewExpense(true)}>Add new expense</button>}
     </Card>
   )
 }
