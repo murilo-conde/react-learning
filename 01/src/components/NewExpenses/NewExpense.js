@@ -9,6 +9,8 @@ const NewExpense = ({onAddExpanse}) => {
   const saveExpenseHandler = (data) => {
     const expense = {
       ...data,
+      title: data.title.charAt(0).toUpperCase() + data.title.slice(1).toLowerCase(),
+      amount: +data.amount,
       date: new Date(data.date),
       key: (Math.random() * 100000000000000000).toString()
     }
