@@ -12,7 +12,7 @@ const defaultValues = {
 }
 
 const AddUser = () => {
-  const {register, handleSubmit, reset, setFocus} = useForm({defaultValues})
+  const {register, handleSubmit, reset, setFocus, formState: {isSubmitSuccessful}} = useForm({defaultValues})
 
   const onSubmit = (data) => {
     data.age = +data.age
@@ -23,7 +23,7 @@ const AddUser = () => {
 
   useEffect(() => {
     setFocus("username")
-  }, [setFocus, onSubmit])
+  }, [setFocus, isSubmitSuccessful])
 
   return (
     <Card className={styles.card}>
